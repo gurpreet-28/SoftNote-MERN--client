@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Signup(props) {
-  const host = "http://localhost:5000";
+  const host = "https://softnote-server.onrender.com";
   const navigate = useNavigate();
 
   const [creds, setCreds] = useState({
