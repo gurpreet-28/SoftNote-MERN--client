@@ -10,10 +10,10 @@ function Notes(props) {
   useEffect(() => {
     if (localStorage.getItem("token") !== null) {
       getNotes();
+      // eslint-disable-next-line
     } else {
       navigate("/login");
     }
-    // eslint-disable-next-line
   }, []);
 
   const [note, setNote] = useState({

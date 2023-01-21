@@ -3,7 +3,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
   // Add trycatch
-  const host = "https://softnote-server.onrender.com";
+  const host = process.env.REACT_APP_HOST;
 
   const [notes, setNotes] = useState([]);
 
