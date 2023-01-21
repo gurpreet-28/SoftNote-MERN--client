@@ -3,7 +3,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
   // Add trycatch
-  const host = "http://localhost:5000";
+  const host = "https://softnote-server.onrender.com";
 
   const [notes, setNotes] = useState([]);
 
