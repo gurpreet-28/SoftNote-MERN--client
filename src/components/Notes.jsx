@@ -7,13 +7,14 @@ function Notes(props) {
   let navigate = useNavigate();
   const context = useContext(noteContext);
   const { notes, getNotes, editNote } = context;
+
   useEffect(() => {
     if (localStorage.getItem("token") !== null) {
       getNotes();
-      // eslint-disable-next-line
     } else {
       navigate("/login");
     }
+    // eslint-disable-next-line
   }, []);
 
   const [note, setNote] = useState({
@@ -53,7 +54,7 @@ function Notes(props) {
         data-bs-target="#exampleModal"
         ref={ref}
       >
-        Launch demo modal
+        {/* Launch demo modal */}
       </button>
       <div
         className="modal fade"
