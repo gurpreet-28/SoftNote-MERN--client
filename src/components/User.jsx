@@ -35,7 +35,7 @@ const User = () => {
           <Loading />
         </div>
       ) : (
-        <div className="container">
+        <div className="container text-center">
           <div></div>
           <div>
             <div>
