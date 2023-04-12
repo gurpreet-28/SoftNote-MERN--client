@@ -6,8 +6,9 @@ import About from "./components/About";
 import Notes from "./components/Notes";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import NoteState from "./context/notes/NoteState";
 import Alert from "./components/Alert";
+import User from "./components/User";
+import NoteState from "./context/notes/NoteState";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -40,6 +41,7 @@ function App() {
                 }
               />
               <Route path="/about" element={<About />} />
+              <Route path="/user" element={<User />} />
               <Route path="/notes" element={<Notes showAlert={showAlert} />} />
               <Route path="/login" element={<Login showAlert={showAlert} />} />
               <Route
