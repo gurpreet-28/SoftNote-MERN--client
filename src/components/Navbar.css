@@ -4,6 +4,14 @@
 .navbar-brand {
   font-size: 1.5rem;
 }
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
 .fill,
 .fill:hover,
 .fill:active,

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import notes from "./notes.png";
 import "./LoginSignup.css";
+import Loading from "./Loading";
 
 function Signup(props) {
   const host = process.env.REACT_APP_HOST;
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(false);
   const [creds, setCreds] = useState({
     name: "",
     email: "",
@@ -16,6 +18,7 @@ function Signup(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const response = await fetch(`${host}/api/auth/signup`, {
       method: "POST",
       headers: {
@@ -28,6 +31,7 @@ function Signup(props) {
       }),
     });
     const data = await response.json();
+    setLoading(false);
     // redirect
     if (data.success === true) {
       console.log(data);
@@ -100,7 +104,7 @@ function Signup(props) {
           />
         </div>
         <button type="submit" className="btn login-signup-btn px-4">
-          Signup
+          Signup {loading && <Loading />}
         </button>
       </form>
     </div>
