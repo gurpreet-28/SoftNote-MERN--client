@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginSignup.css";
+import notes from "./notes.png";
 
 function Login(props) {
   const host = process.env.REACT_APP_HOST;
@@ -35,44 +37,42 @@ function Login(props) {
   };
 
   return (
-    <div className="container">
-      <h1>Login to Continue</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            value={creds.email}
-            onChange={handelChange}
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+    <>
+      <div className="container login-signup text-center">
+        <div>
+          <img src={notes} alt="notes" />
+          <h1 className="mt-2">Login to Continue</h1>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-2">
+            <input
+              type="email"
+              className="form-control mx-auto p-3 login-signup-form"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              value={creds.email}
+              onChange={handelChange}
+              aria-describedby="emailHelp"
+            />
           </div>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            value={creds.password}
-            onChange={handelChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Login
-        </button>
-      </form>
-    </div>
+          <div className="mb-3">
+            <input
+              type="password"
+              className="form-control mx-auto p-3 login-signup-form"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value={creds.password}
+              onChange={handelChange}
+            />
+          </div>
+          <button type="submit" className="btn login-signup-btn px-4">
+            Login
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import notes from "./notes.png";
 
 function Navbar() {
   let location = useLocation();
@@ -16,6 +17,12 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
+            <img
+              src={notes}
+              alt="Logo"
+              width="24"
+              className="d-inline-block align-text-top me-1"
+            />
             SoftNote
           </Link>
           <button
@@ -67,25 +74,22 @@ function Navbar() {
             </ul>
             {!localStorage.getItem("token") ? (
               <form className="d-flex" role="search">
-                <Link
-                  className="btn btn-primary mx-2"
-                  to="/login"
-                  role="button"
-                >
-                  Login
+                <Link className="mx-1" to="/login">
+                  <button className="btn fill">Login</button>
                 </Link>
-                <Link
-                  className="btn btn-outline-primary mx-2"
-                  to="/signup"
-                  role="button"
-                >
-                  Signup
+                <Link className="mx-1" to="/signup">
+                  <button className="btn outline">Signup</button>
                 </Link>
               </form>
             ) : (
-              <button onClick={handleLogout} className="btn btn-primary">
-                Logout
-              </button>
+              <div>
+                <Link>
+                  <i class="fa-solid fa-user profile fa-xl me-3"></i>
+                </Link>
+                <button onClick={handleLogout} className="btn fill">
+                  Logout
+                </button>
+              </div>
             )}
           </div>
         </div>

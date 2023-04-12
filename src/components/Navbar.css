@@ -1,3 +1,27 @@
 .navbar {
   background-color: #0a0a23 !important;
 }
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.fill,
+.fill:hover,
+.fill:active,
+.fill:visited {
+  border-radius: 2px;
+  background-color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+.outline,
+.outline:hover,
+.outline:active,
+.outline:visited {
+  border-radius: 2px;
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+.profile {
+  color: white;
+  cursor: pointer;
+}

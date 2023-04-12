@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import noteContext from "../context/notes/noteContext";
 import NoteItem from "./NoteItem";
+import "./Notes.css";
 
 function Notes(props) {
   let navigate = useNavigate();
@@ -53,9 +54,7 @@ function Notes(props) {
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         ref={ref}
-      >
-        {/* Launch demo modal */}
-      </button>
+      ></button>
       <div
         className="modal fade"
         id="exampleModal"
@@ -84,7 +83,7 @@ function Notes(props) {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control modal-form py-2"
                     id="etitle"
                     name="etitle"
                     value={note.etitle}
@@ -99,7 +98,7 @@ function Notes(props) {
                     Description
                   </label>
                   <textarea
-                    className="form-control"
+                    className="form-control modal-form py-2"
                     id="edescription"
                     name="edescription"
                     rows="5"
@@ -115,7 +114,7 @@ function Notes(props) {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control modal-form py-2"
                     id="etag"
                     name="etag"
                     placeholder="Tags"
@@ -129,14 +128,14 @@ function Notes(props) {
               <button
                 ref={refClose}
                 type="button"
-                className="btn btn-secondary"
+                className="btn cancel-btn"
                 data-bs-dismiss="modal"
               >
                 Cancel
               </button>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn save-btn"
                 onClick={handleClick}
               >
                 Save changes
@@ -145,10 +144,15 @@ function Notes(props) {
           </div>
         </div>
       </div>
-      <div className="row my-3">
-        <h2>Your notes</h2>
+
+      <div className="row my-3 text-center">
+        <h1>Your notes</h1>
         <div className="container">
-          {notes.length === 0 && "You dont have any notes...🙃"}
+          {notes.length === 0 && (
+            <div>
+              <h4 className="mt-3">You don't have any notes...🙃</h4>
+            </div>
+          )}
         </div>
         {notes.map((note) => {
           return (

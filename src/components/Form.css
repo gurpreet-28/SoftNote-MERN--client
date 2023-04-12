@@ -1,0 +1,30 @@
+h1 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.form {
+  max-width: 1000px;
+}
+.form-control {
+  border: 1px solid var(--tertiary-color);
+  border-radius: 3px;
+}
+.form-control:focus {
+  border-color: var(--tertiary-color);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px var(--tertiary-color);
+  outline: 0 none;
+}
+.add-btn {
+  font-size: large;
+  border-radius: 2px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+.add-btn:hover,
+.add-btn:active,
+.add-btn:visited {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}

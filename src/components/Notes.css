@@ -1,0 +1,66 @@
+.row h1 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.row h4 {
+  color: var(--primary-color);
+}
+.card {
+  border: 1.5px solid var(--primary-color);
+  border-radius: 2px;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-text {
+  font-size: 1.1rem;
+}
+.card-footer {
+  color: rgba(0, 0, 0, 0.7) !important;
+  border-top-color: var(--primary-color);
+  border-bottom-left-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+  background-color: var(--tertiary-color);
+}
+.card i {
+  color: var(--primary-color);
+}
+
+/* Modal */
+.modal-content {
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  background-color: var(--secondary-color);
+}
+.modal-title {
+  color: var(--primary-color);
+}
+.modal-form {
+  border-radius: 3px;
+}
+.save-btn {
+  font-size: large;
+  border-radius: 2px;
+  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+.save-btn:hover,
+.save-btn:active,
+.save-btn:visited {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.cancel-btn {
+  font-size: large;
+  border-radius: 2px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+.cancel-btn:hover,
+.cancel-btn:active,
+.cancel-btn:visited {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

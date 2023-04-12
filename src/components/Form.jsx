@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import noteContext from "../context/notes/noteContext";
+import "./Form.css";
 
 function Form(props) {
   const [note, setNote] = useState({
@@ -26,16 +27,13 @@ function Form(props) {
 
   return (
     <>
-      <div className="container my-3">
-        <h1>Add a note</h1>
+      <div className="container my-3 text-center form">
+        <h1 className="mb-3">Add a note</h1>
         <form>
-          <div className="mb-3">
-            <label htmlFor="title" className="form-label">
-              Title
-            </label>
+          <div className="mb-2">
             <input
               type="text"
-              className="form-control"
+              className="form-control form-el py-2 px-3"
               id="title"
               name="title"
               placeholder="Title"
@@ -45,15 +43,13 @@ function Form(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="description" className="form-label">
-              Description
-            </label>
+          <div className="mb-2">
             <textarea
-              className="form-control"
+              className="form-control form-el py-2 px-3"
               id="description"
               name="description"
-              rows="8"
+              rows="10"
+              placeholder="Add your note..."
               minLength={5}
               required
               value={note.description}
@@ -61,15 +57,12 @@ function Form(props) {
             ></textarea>
           </div>
           <div className="mb-3">
-            <label htmlFor="tag" className="form-label">
-              Tags
-            </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control form-el py-2 px-3"
               id="tag"
               name="tag"
-              placeholder="Tags"
+              placeholder="Tags (optional)"
               value={note.tag}
               onChange={handleChange}
             />
@@ -77,7 +70,7 @@ function Form(props) {
           <button
             disabled={note.title.length < 5 || note.description.length < 5}
             type="submit"
-            className="btn btn-primary"
+            className="btn add-btn px-5 mt-2"
             onClick={handleClick}
           >
             Add Note

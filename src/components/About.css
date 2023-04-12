@@ -1,0 +1,26 @@
+/* .about {
+  border: 1px solid red;
+} */
+.about img {
+  filter: invert(100%);
+  width: 72px;
+  transform: rotate(-15deg);
+}
+.short-sum {
+  text-align: justify;
+  max-width: 800px;
+  font-size: 1.1rem;
+}
+.start-btn {
+  font-size: 1.1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+.start-btn:hover,
+.start-btn:active,
+.start-btn:visited {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

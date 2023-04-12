@@ -1,0 +1,31 @@
+.login-signup {
+  max-width: 500px;
+  height: 550px;
+  background-color: #f5f6f7;
+  border: 1.5px solid var(--primary-color);
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.login-signup img {
+  width: 48px;
+  filter: invert(100%);
+}
+.login-signup-form {
+  width: 80%;
+  font-size: 1rem;
+}
+.login-signup-btn {
+  font-size: large;
+  border-radius: 2px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+.login-signup-btn:hover,
+.login-signup-btn:active,
+.login-signup-btn:visited {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+}
