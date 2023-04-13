@@ -103,7 +103,7 @@ function Signup(props) {
             onChange={handelChange}
           />
         </div>
-        <button type="submit" className="btn login-signup-btn px-4">
+        <button type="submit" className="login-signup-btn px-4 py-2">
           Signup {loading && <Loading />}
         </button>
       </form>

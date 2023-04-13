@@ -20,12 +20,6 @@
   font-size: large;
   border-radius: 2px;
   color: var(--primary-color);
-  border-color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
   background-color: var(--tertiary-color);
-}
-.login-signup-btn:hover,
-.login-signup-btn:active,
-.login-signup-btn:visited {
-  background-color: var(--primary-color);
-  color: var(--tertiary-color);
 }

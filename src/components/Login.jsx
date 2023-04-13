@@ -44,7 +44,7 @@ function Login(props) {
     <>
       <div className="container login-signup text-center">
         <div>
-          <img src={notes} alt="notes" />
+          <img src={notes} alt="notes" className="notes-img" />
           <h1 className="mt-2">Login to Continue</h1>
         </div>
         <form onSubmit={handleSubmit}>
@@ -71,7 +71,7 @@ function Login(props) {
               onChange={handelChange}
             />
           </div>
-          <button type="submit" className="btn login-signup-btn px-4">
+          <button type="submit" className="login-signup-btn px-4 py-2">
             Login {loading && <Loading />}
           </button>
         </form>

@@ -6,9 +6,11 @@ const NoteState = (props) => {
   const host = process.env.REACT_APP_HOST;
 
   const [notes, setNotes] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   //   Get note
   const getNotes = async () => {
+    setLoading(true);
     const response = await fetch(`${host}/api/notes/allnotes`, {
       method: "GET",
       headers: {
@@ -19,6 +21,7 @@ const NoteState = (props) => {
 
     const data = await response.json();
     setNotes(data);
+    setLoading(false);
   };
 
   //   Add note
@@ -79,7 +82,7 @@ const NoteState = (props) => {
 
   return (
     <NoteContext.Provider
-      value={{ notes, addNote, deleteNote, editNote, getNotes }}
+      value={{ notes, loading, addNote, deleteNote, editNote, getNotes }}
     >
       {props.children}
     </NoteContext.Provider>

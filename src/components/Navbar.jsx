@@ -84,7 +84,7 @@ function Navbar() {
             ) : (
               <div>
                 <Link to="/user">
-                  <i class="fa-solid fa-user profile fa-xl me-3"></i>
+                  <i className="fa-solid fa-user profile fa-xl me-3"></i>
                 </Link>
                 <button onClick={handleLogout} className="btn fill">
                   Logout
