@@ -93,7 +93,7 @@ function Signup(props) {
         <div className="mb-3">
           <input
             type="cpassword"
-            className="form-control mx-auto p-3  login-signup-form"
+            className="form-control mx-auto p-3 login-signup-form"
             id="cpassword"
             name="cpassword"
             placeholder="Confirm Password"
@@ -103,9 +103,15 @@ function Signup(props) {
             onChange={handelChange}
           />
         </div>
-        <button type="submit" className="login-signup-btn px-4 py-2">
-          Signup {loading && <Loading />}
-        </button>
+        {loading ? (
+          <button className="loading-btn px-4 py-2">
+            <Loading />
+          </button>
+        ) : (
+          <button type="submit" className="login-signup-btn px-4 py-2">
+            Signup
+          </button>
+        )}
       </form>
     </div>
   );

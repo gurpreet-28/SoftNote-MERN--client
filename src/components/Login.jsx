@@ -71,9 +71,15 @@ function Login(props) {
               onChange={handelChange}
             />
           </div>
-          <button type="submit" className="login-signup-btn px-4 py-2">
-            Login {loading && <Loading />}
-          </button>
+          {loading ? (
+            <button className="loading-btn px-4 py-2">
+              <Loading />
+            </button>
+          ) : (
+            <button type="submit" className="login-signup-btn px-4 py-2">
+              Login
+            </button>
+          )}
         </form>
       </div>
     </>

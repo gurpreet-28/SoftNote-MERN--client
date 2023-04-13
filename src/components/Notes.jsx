@@ -69,12 +69,6 @@ function Notes(props) {
               <h1 className="modal-title fs-5" id="exampleModalLabel">
                 Edit Note
               </h1>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="modal-body">
               <form action="/">
@@ -111,7 +105,7 @@ function Notes(props) {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="etag" className="form-label">
-                    Tags
+                    Tags (optional)
                   </label>
                   <input
                     type="text"

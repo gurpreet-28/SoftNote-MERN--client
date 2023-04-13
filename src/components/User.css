@@ -6,3 +6,6 @@
   font-weight: bold;
   font-size: 2rem;
 }
+.user-profile span {
+  color: var(--primary-color);
+}
