@@ -50,7 +50,7 @@ function Signup(props) {
     <div className="container text-center login-signup">
       <div>
         <img src={notes} alt="notes" />
-        <h1>Sign me up</h1>
+        <h2>Join SoftNote.</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="mb-2">

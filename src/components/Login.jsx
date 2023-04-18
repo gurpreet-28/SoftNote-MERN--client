@@ -44,8 +44,8 @@ function Login(props) {
     <>
       <div className="container login-signup text-center">
         <div>
-          <img src={notes} alt="notes" className="notes-img" />
-          <h1 className="mt-2">Login to Continue</h1>
+          <img src={notes} alt="notes" />
+          <h2 className="mt-2">Welcome back.</h2>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="mb-2">
